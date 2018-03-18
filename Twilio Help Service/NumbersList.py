@@ -7,11 +7,8 @@ list = []
 
  
 def addtoFile(num):
-    file = open("savedNumbers.txt","w") 
+    file = open("savedNumbers.txt","a") 
     file.write(num)
-    file.close()
-    file = open("savedNumbers.txt","r") 
-    print file.read() 
     file.close()
 
 def writeListToFile():
