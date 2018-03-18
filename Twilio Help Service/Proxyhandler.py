@@ -1,17 +1,22 @@
 # Get the Python helper library from https://twilio.com/docs/libraries/python
 from twilio.rest import Client
 import uuid
+from configparser import ConfigParser
+
+config = ConfigParser()
+config.read('config.cfg')
+account = config.get('auth', 'account')
+token = config.get('auth', 'token')
+servicesid = config.get('auth', 'servicesid')
+
 
 # Get your Account SID and Auth Token from https://twilio.com/console
-account = "AC6171934216186661cda5e8c49c82db24"
-token = "3d9dc7d0ccf72dd486af6a95ec69e4eb"
 
 client = Client(account, token)
 
-servicesid = "KS041c20c7b86072133d4053883b04a8b6"
+
 
 def connect(body, userNumber, volNumber):
-  
 
     session = client.proxy \
         .services(servicesid) \
