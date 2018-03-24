@@ -9,12 +9,9 @@ account = config.get('auth', 'account')
 token = config.get('auth', 'token')
 servicesid = config.get('auth', 'servicesid')
 
-
 # Get your Account SID and Auth Token from https://twilio.com/console
 
 client = Client(account, token)
-
-
 
 def connect(body, userNumber, volNumber):
 

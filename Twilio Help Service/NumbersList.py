@@ -4,8 +4,6 @@ import numpy
 
 list = []
 
-
- 
 def addtoFile(num):
     file = open("savedNumbers.txt","a") 
     file.write(num)
